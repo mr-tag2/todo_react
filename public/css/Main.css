@@ -1,0 +1,57 @@
+body.main-body-dark {
+  margin               : 0;
+  background-image     : url(/image/back.png);
+  background-attachment: fixed;
+  background-size      : cover;
+  color                : white;
+  width                : 99.9%;
+  opacity              : 0.8;
+}
+
+body.main-body-dark input[type="text"] {
+  background-color: rgb(10, 10, 10);
+  color           : white;
+}
+
+.text-purple {
+  color: purple;
+}
+
+.back-purple {
+  background-color: #2b013f !important;
+  color           : white !important;
+}
+
+.back-header {
+  background-color: rgb(25 1 35 / 50%) !important;
+  color           : white !important;
+}
+
+.front-purple {
+  background-color: gray !important;
+  color           : purple !important;
+}
+
+.main-form {
+  text-align     : center;
+  text-align     : -moz-center;
+  text-align     : -webkit-center;
+  justify-content: center;
+}
+
+.box-input {
+  justify-content: center;
+  margin-top     : 3.2rem;
+}
+
+.card-box .card-body {
+  background-color: black;
+}
+
+.icon-fixed-width {
+  width: 42px;
+}
+
+.font-cursive {
+  font-family: cursive;
+}
