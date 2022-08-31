@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from "react";
-import MainContext from "../../Context/MainCotext";
+import MainContext from "../../Context/MainContext";
 
 const NewTask = () => {
   const cx = useContext(MainContext);

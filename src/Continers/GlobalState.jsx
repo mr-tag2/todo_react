@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { v4 as unicId } from "uuid";
 import { toast } from "react-toastify";
-import MainContext from "../Context/MainCotext";
+import MainContext from "../Context/MainContext";
 
 const GlobalState = (props) => {
-  const [todos, setTodos] = useState([]),
-    [task, setTask] = useState("");
+  const [todos, setTodos] = useState(
+    localStorage.getItem("todos")
+      ? JSON.parse(localStorage.getItem("todos"))
+      : []
+  );
+  const [task, setTask] = useState("");
 
   const newTask = () => {
     const newArr = [...todos];
@@ -21,6 +25,7 @@ const GlobalState = (props) => {
       toast.success("Task Added", {
         theme: "dark",
         position: "bottom-center",
+        autoClose: 10000,
       });
     }
   };
@@ -33,6 +38,7 @@ const GlobalState = (props) => {
     toast.info(`Task ${!arr[index].isCom ? "UnC" : "C"}ompleted`, {
       theme: "dark",
       position: "bottom-center",
+      autoClose: 10000,
     });
   };
 
@@ -43,12 +49,17 @@ const GlobalState = (props) => {
     toast.error("Task deleted", {
       theme: "dark",
       position: "bottom-center",
+      autoClose: 10000,
     });
   };
 
   const taskSave = (ev) => {
     setTask(ev.target.value);
   };
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   return (
     <MainContext.Provider

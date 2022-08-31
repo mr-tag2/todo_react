@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from "react";
-import MainContext from "../../Context/MainCotext";
+import MainContext from "../../Context/MainContext";
 import Todo from "./Todo";
 
 const Todos = () => {
@@ -7,7 +7,7 @@ const Todos = () => {
   const { todos, deleteTask, completedTask } = cx;
   return (
     <Fragment>
-      {todos.map(item => (
+      {todos.map((item) => (
         <Todo
           key={item.id}
           task={item.task}
