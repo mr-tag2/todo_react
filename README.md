@@ -2,4 +2,4 @@
 
 ![](public/image/README/Home.png)
 
-React - JavaScript - LocalStorage
+ReactJS - JavaScript - LocalStorage
