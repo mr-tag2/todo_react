@@ -6,7 +6,7 @@ const Nav = () => {
     <div className="m-2">
       <ul className="nav back-purple badge-secondary">
         <NavLink
-          to={"/todoReact"}
+          to={"/"}
           className="nav-link"
           exact
           activeClassName="badge-secondary"
@@ -14,7 +14,7 @@ const Nav = () => {
           Tasks
         </NavLink>
         <NavLink
-          to={"/todoReact/About"}
+          to={"/About"}
           className="nav-link"
           exact
           activeClassName="badge-secondary"
