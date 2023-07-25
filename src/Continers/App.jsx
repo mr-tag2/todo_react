@@ -10,8 +10,8 @@ const App = () => {
     <Fragment>
       <Nav />
       <Switch>
-        <Route path="/todoReact" exact component={TaskMain} />
-        <Route path="/todoReact/About" exact component={About} />
+        <Route path="/" exact component={TaskMain} />
+        <Route path="/About" exact component={About} />
       </Switch>
     </Fragment>
   );
